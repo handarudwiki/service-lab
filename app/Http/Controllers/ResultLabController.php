@@ -115,6 +115,8 @@ class ResultLabController extends Controller
             Storage::delete($resultLab->hasil_lab);
         }
 
+        $validated['hasil_lab'] = $request->file('hasil_lab')->store('public/hasil-lab');
+
         // $validated['hasil_lab'] = $request->file('hasil_lab')->store('public/hasil-lab');
 
 
